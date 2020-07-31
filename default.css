@@ -1,0 +1,348 @@
+:root{
+  --mainColor: #eaeaea;
+  --secondaryColor: #fff;
+  --borderColor: #c1c1c1;
+  --mainText: black;
+  --secondaryText: #4b5156; 
+  --previewColor:#D2F5FA;
+}
+
+html,body{
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+}
+
+h1,h2,h5,h6,strong{
+	color: var(--mainText);
+	font-family: 'Quicksand', sans-serif;
+}
+
+p,span,h3,label,textarea,li,input,h4{
+	color: var(--secondaryText);
+	font-family: 'Actor', sans-serif;
+}
+a{
+	text-decoration: none;
+	color: #17a2b8;
+}
+
+ul{
+	list-style: none;
+}
+h1{ font-size: 56px; }
+h2{ font-size: 36px; }
+h3{ font-size: 28px; }
+h4{ font-size: 24px; }
+h5{ font-size: 20px; }
+h6{ font-size: 16px; }
+
+.s1{
+	background-color: var(--mainColor);
+	border-bottom: 1px solid var(--borderColor);
+	overflow: auto;
+}
+
+.s2{
+	background-color: var(--secondaryColor);
+	border-bottom: 1px solid var(--borderColor);
+	overflow: auto;
+}
+
+.mainContainer{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.greeting-wrapper{
+	display: grid;
+	min-height: 15em;
+   
+}
+.typewriter h1 {
+   width: auto;
+  display: inline-block;
+  display: grid;
+  
+  padding-top: 30px;
+  padding-bottom: 10px;
+  width: fit-content;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid grey; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .05em; /* Adjust as needed */
+  animation: 
+    typing 3.0s steps(22, end),
+    blink-caret .50s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { max-width: 0 }
+  to { max-width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: grey; }
+}
+
+.intro-wrapper {
+	background-color: var(--secondaryColor);
+	border:1px solid var(--borderColor);
+	border-radius: 5px 5px 0 0 ;
+	-webkit-box-shadow: 3px 4px 14px -1px rgba(117,106,117,1);
+     -moz-box-shadow: 3px 4px 14px -1px rgba(117,106,117,1);
+      box-shadow: 3px 4px 14px -1px rgba(117,106,117,1);
+
+      display: grid;
+      grid-template-rows: 3em 30em;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 
+      'nav-wrapper nav-wrapper'
+      'left-column right-column'
+      ; 
+
+}
+.nav-wrapper{
+	grid-area: nav-wrapper;
+	border-radius: 5px 5px 0 0 ;
+	border-bottom: 1px solid var(--borderColor);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--mainColor);
+}
+.dots-wrapper{
+	display: flex;
+	padding: 10px;
+}
+.browser-dots{
+	background-color: grey;
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	margin: 5px;
+}
+#dot-1{
+	background-color: #001f3f;
+}
+#dot-2{
+	background-color: #39CCCC;
+}
+#dot-3{
+	background-color: #3D9970;
+}
+
+				
+.left-column{
+	grid-area: left-column ;
+	 
+}
+#profile_pic{
+	
+	display: block;
+	margin:  30px auto;
+
+	height: 300px;
+	width: 300px;
+	
+	border: 2px solid var(--borderColor);
+	border-radius: 50%;
+
+}
+.right-column{
+	grid-area: right-column;
+	align-content: center;
+	display: grid;
+	 padding-top: 50px;
+	 padding-bottom: 50px;
+}
+.preview-shadow{
+	background-color:#D4E1E3;
+	width: 300px;
+	height: 180px;
+	padding-left: 40px;
+	padding-top: 40px;
+
+}
+.preview{
+	width: 300px;
+	padding-top: 5px;
+	padding-left: 20px;
+	background-color: #E9F3F4;
+
+}
+
+
+.about-wrapper{
+	display: grid;
+	grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+	padding-bottom: 50px;
+	padding-top: 50px;
+	gap:100px;
+}
+.about-me h4{
+	font-weight: 400;
+	font-family: 'Actor', sans-serif;
+}
+
+
+#skills{
+	display: flex;
+	justify-content: space-evenly;
+	background-color: #E9F3F4;
+}
+.academic{
+	display: grid;
+	align-content: center;
+	text-align: center;
+}
+#college{
+	display: flex;
+	justify-content: space-evenly;
+}
+.post-wrapper{
+	display: grid;
+	grid-template-columns: repeat(auto-fit,320px);
+	gap:20px;
+	justify-content: center;
+	padding-bottom: 50px;
+}
+.post{
+	border:1px solid var(--borderColor);
+	-webkit-box-shadow: 3px 4px 14px -1px rgba(117,106,117,1);
+     -moz-box-shadow: 3px 4px 14px -1px rgba(117,106,117,1);
+      box-shadow: 3px 4px 14px -1px rgba(117,106,117,1);
+}
+.post-preview{
+	background-color: #fff;
+	padding: 20px;
+}
+.thumbnail{
+	display: block;
+	width:320px;
+	height:200px;
+	object-fit: cover;
+}
+.post-title{
+ color: black;
+ font-family: 'Quicksand', sans-serif;
+}
+.post-intro{
+ color: grey;
+ font-family: 'Actor', sans-serif;
+ font-size: 16px;
+}
+.contact-form{
+	display: block;
+	margin: 0 auto;
+	padding:15px;
+}
+.input-field{
+	width: 50%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: var(--mainColor);
+	border: 1px solid var(--borderColor);
+	border-radius: 5px;
+
+}
+#submit-btn{
+	margin-top: 10px;
+	width: 100px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: : grey; 
+	color: black;
+}
+#contact-form label{
+	line-height: 2.7em;
+
+}
+#contact-form textarea{
+	min-height: 100px;
+	font-size: 14px;
+}
+
+.contact{
+	display: grid;
+	grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+	padding-bottom: 50px;
+	padding-top: 50px;
+	gap:100px;
+}
+.icons{
+	padding-top: 10px;
+	padding-left: 160px;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+.fa:hover {
+  opacity: 0.7;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-google{
+	background: #ea4335;
+	color: white;
+}
+.fa-linkedin{
+	background: #007bb5;
+	color: white;
+}
+.fa-snapchat{
+	background: #fffc00;
+	color: white;
+}
+.fa-instagram{
+	background: #c32aa3;
+	color: white;
+}
+#feel{
+	text-align: center;
+  padding-right: 10px;
+  font-family: 'Quicksand', sans-serif;
+}
+#email{
+	text-align: center;
+	padding-top: 10px;
+	font-family: 'Quicksand', sans-serif;
+}
+#wanna{
+	text-align: center;
+	font-family: 'Quicksand', sans-serif;
+}
+
+
+@media screen and (max-width: 1200px){
+	.mainContainer{
+		width:95%;
+	}
+}
+@media screen and (max-width: 800px){
+	.intro-wrapper {
+      grid-template-rows: 3em 30em;
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+      'nav-wrapper'
+      'left-column'
+      'right-column'
+      ; 
+
+}
+}
